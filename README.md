@@ -16,7 +16,7 @@ You can then install the package as normal with "kiss i ...".
 
 Please refer to the [KISS](https://getkiss.org/pages/install) webpage for general information about installing KISS.
 
-### TalosII users
+### TalosII/Blackbird users
 
 As per the instructions on the KISS webpage, boot your machine into another distro and bootstrap KISS from there.
 
