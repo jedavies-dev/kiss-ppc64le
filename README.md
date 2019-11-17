@@ -2,6 +2,8 @@
 
 This is a KISS Linux repository containing packages from the main KISS repo which have been patched to build on powerpc64le.
 
+This is currently for testing purposes only.  While most packages will build without any trouble, there are still some which need some work.  Of these, Rust is the most significant.  It does not build because Rust do not provide stage0 tarballs for powerpc64le musl yet.  Because Rust doesn't build, that means no Firefox.  However, it is possible to build these packages on this platform - Void has done this previously.  Once the necessary changes have been made to the KISS build files, these will be added to this repository. 
+
 ## Using the repo
 
 You should check this repo out to your machine then add it to your KISS_PATH such that it appears first, e.g.:
@@ -26,4 +28,15 @@ This means you can install KISS on your machine without having to install anothe
 There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jdavies-dev/kiss-ppc64le-dist/blob/master/kiss-ppc64le.tar.xz) which you can use to perform the initial install as per the instructions on the KISS website.
 
 This was built with -mcpu=power9, so you will need a Power9-based system to use this tarball.
+
+### GRUB
+
+GRUB does not build currently.  However, it does not need to be installed to boot.  All skiboot parses the file /boot/grub/grub.cfg directly, so you just need to put something in here.  This is what I have - you can use this by replacing the UUID and root partition with your own (see /dev/disk/by-uuid):
+
+    menuentry 'KISS Linux' {
+            search --no-floppy --fs-uuid --set=root b1eccc43-ba54-440a-aeb3-ea50ce08d8fe
+            insmod part_gpt
+            insmod ext2
+            linux /boot/vmlinux root=/dev/nvme0n1p2 ro
+    }
 
