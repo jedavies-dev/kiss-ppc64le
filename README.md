@@ -34,6 +34,6 @@ This was built with -mcpu=power9, so you will need a Power9-based system to use 
 You don't need GRUB or any other additional bootloader to boot your KISS installation on the TalosII/Blackbird.  Petitboot parses the file /boot/grub/grub.cfg directly to look for kernels. Therefore all you need is something appropriate in your /boot/grub/grub.cfg file.  You can use the below example, replacing the root partition with your own:
 
     menuentry 'KISS Linux' {
-            linux /boot/vmlinux root=/dev/nvme0n1p2 ro
+            linux /boot/vmlinux root=/dev/sda1 ro
     }
 
