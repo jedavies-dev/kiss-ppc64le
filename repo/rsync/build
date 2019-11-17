@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+export CFLAGS="-static $CFLAGS"
+
+./configure \
+    --prefix=/usr \
+    --with-included-popt \
+    --build=powerpc64le-musl-linux
+
+make
+make DESTDIR="$1" install
