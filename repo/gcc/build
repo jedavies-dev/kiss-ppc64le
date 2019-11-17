@@ -35,7 +35,8 @@ export libat_cv_have_ifunc=no
     --enable-threads \
     --enable-tls \
     --enable-languages=c,c++ \
-    --build=powerpc64le-linux-musl
+    --build=powerpc64le-linux-musl \
+    --disable-bootstrap
 
 make
 make DESTDIR="$1" install
