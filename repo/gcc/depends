@@ -1,5 +1,1 @@
-binutils
-bison
-flex
-linux-headers
-zlib
+/var/db/kiss/repo/core/gcc/depends
