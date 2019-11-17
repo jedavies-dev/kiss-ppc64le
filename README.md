@@ -22,7 +22,7 @@ Please refer to the [KISS](https://getkiss.org/pages/install) webpage for genera
 
 As per the instructions on the KISS webpage, boot your machine into another distro and bootstrap KISS from there.
 
-For TalosII/Blackbird users, you can load the [Debian netboot](http://ftp.debian.org/debian/dists/buster/main/installer-ppc64el/current/images/netboot/debian-installer/ppc64el/) image directly into skiboot.
+For TalosII/Blackbird users, you can load the [Debian netboot](http://ftp.debian.org/debian/dists/buster/main/installer-ppc64el/current/images/netboot/debian-installer/ppc64el/) image directly into petitboot by pressing "n" on the boot menu.
 This means you can install KISS on your machine without having to install another distro first.
 
 There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jdavies-dev/kiss-ppc64le-dist/blob/master/kiss-ppc64le.tar.xz) which you can use to perform the initial install as per the instructions on the KISS website.
@@ -31,12 +31,9 @@ This was built with -mcpu=power9, so you will need a Power9-based system to use 
 
 ### GRUB
 
-GRUB does not build currently.  However, it does not need to be installed to boot.  All skiboot parses the file /boot/grub/grub.cfg directly, so you just need to put something in here.  This is what I have - you can use this by replacing the UUID and root partition with your own (see /dev/disk/by-uuid):
+You don't need GRUB, or any other additional bootloader to boot your KISS installation on the TalosII/Blackbird.  Petitboot parses the file /boot/grub/grub.cfg directly to look for kernels, so you just need to put something in here.  This is what I have - you can use this by replacing the root partition with your own:
 
     menuentry 'KISS Linux' {
-            search --no-floppy --fs-uuid --set=root b1eccc43-ba54-440a-aeb3-ea50ce08d8fe
-            insmod part_gpt
-            insmod ext2
             linux /boot/vmlinux root=/dev/nvme0n1p2 ro
     }
 
