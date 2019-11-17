@@ -1,6 +1,6 @@
 # KISS Linux for powerpc64le
 
-This is a KISS Linux repository containing packages from the main KISS repo which have been patched to build on powerpc64le.
+This is a KISS Linux repository containing packages from the main KISS repos which have been patched to build on powerpc64le.
 
 This is currently for testing purposes only.  While most packages will build without any trouble, there are still some which need some work.  Of these, Rust is the most significant.  It does not build because Rust do not provide stage0 tarballs for powerpc64le musl yet.  Because Rust doesn't build, that means no Firefox.  However, it is possible to build these packages on this platform - Void has done this previously.  Once the necessary changes have been made to the KISS build files, these will be added to this repository. 
 
@@ -27,7 +27,11 @@ This means you can install KISS on your machine without having to install anothe
 
 There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jdavies-dev/kiss-ppc64le-dist/blob/master/kiss-ppc64le.tar.xz) which you can use to perform the initial install as per the instructions on the KISS website.
 
-This was built with -mcpu=power9, so you will need a Power9-based system to use this tarball.
+This was built with -mcpu=power9, so you will need a Power9-based system to use this tarball
+
+### Kernel modules
+
+Be sure to load evdev on boot to load keyboard input support.  Tested with amdgpu/rx580: supported and works fine with xorg.
 
 ### GRUB
 
@@ -37,3 +41,6 @@ You don't need GRUB or any other additional bootloader to boot your KISS install
             linux /boot/vmlinux root=/dev/sda1 ro
     }
 
+## Repo Structure
+
+Packages which override ones in core/ extra/ xorg/ and testing/ will have symlinks to the corresponding files on your machine in /var/db/kiss/repo/.  Packages which override ones in community contain a copy of the set of build files.
