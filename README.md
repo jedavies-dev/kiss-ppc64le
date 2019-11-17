@@ -8,9 +8,9 @@ This is currently for testing purposes only.  While most packages will build wit
 
 You should check this repo out to your machine then add it to your KISS_PATH such that it appears first, e.g.:
 
-    export KISS_PATH=/home/myuser/kiss-ppc64le/repo:[your other repos]
+    export KISS_PATH=/home/myuser/kiss-ppc64le/repo:/home/myuser/kiss-ppc64le/community:[your other repos]
 
-This repo contains packages which also exist in the main KISS repo.  However if this repo is specified first in your KISS_PATH, this means that the powerpc version of the package will be built instead of the x86 version.
+This repo contains packages which also exist in the main KISS repos.  However if this repo is specified first in your KISS_PATH, this means that the powerpc version of the package will be built instead of the x86 version.
 
 You can then install the package as normal with "kiss i ...".
 
@@ -43,4 +43,5 @@ You don't need GRUB or any other additional bootloader to boot your KISS install
 
 ## Repo Structure
 
-Packages which override ones in core/ extra/ xorg/ and testing/ will have symlinks to the corresponding files on your machine in /var/db/kiss/repo/.  Packages which override ones in community contain a copy of the set of build files.
+Packages which override ones in core/ extra/ xorg/ and testing/ have symlinks to the corresponding files on your machine in /var/db/kiss/repo/, and are in the top level "repo" directory.
+Packages which override ones in community/ contain a copy of the set of build files, and are in the top level "community" directory.
