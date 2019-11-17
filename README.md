@@ -27,7 +27,11 @@ This means you can install KISS on your machine without having to install anothe
 
 There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jdavies-dev/kiss-ppc64le-dist/blob/master/kiss-ppc64le.tar.xz) which you can use to perform the initial install as per the instructions on the KISS website.
 
-This was built with -mcpu=power9, so you will need a Power9-based system to use this tarball.
+This was built with -mcpu=power9, so you will need a Power9-based system to use this tarball
+
+### Kernel modules
+
+Be sure to load evdev on boot to load keyboard input support.  Tested with amdgpu/rx580: supported and works fine with xorg.
 
 ### GRUB
 
