@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+patch -p0 < libtheora-1.1.1-libpng16.patch
+
+./configure \
+    --prefix=/usr \
+    --build=powerpc64le-musl-linux
+
+make
+make DESTDIR="$1" install
