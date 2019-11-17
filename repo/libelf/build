@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+patch -p1 < preprocessor-warnings.patch
+
+./configure \
+    --prefix=/usr \
+    --enable-nls=auto \
+    --build=powerpc64le-musl-linux \
+    --host=powerpc64le-musl-linux 
+
+make
+make prefix="$1/usr" install
