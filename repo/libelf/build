@@ -1,12 +1,12 @@
 #!/bin/sh -e
 
-patch -p1 < preprocessor-warnings.patch
+sed -i'' 's/-I/-isystem /g' libelf.pc.in
 
 ./configure \
     --prefix=/usr \
     --enable-nls=auto \
     --build=powerpc64le-musl-linux \
-    --host=powerpc64le-musl-linux 
+    --host=powerpc64le-musl-linux
 
 make
 make prefix="$1/usr" install
