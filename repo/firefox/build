@@ -18,6 +18,8 @@ export LDFLAGS="$LDFLAGS -Wl,-rpath=/usr/lib/firefox"
 export CC=${CC:-gcc}
 export CXX=${CXX:-g++}
 
+export CPLUS_INCLUDE_PATH=/usr/include/c++/9.2.0:/usr/include/c++/9.2.0/powerpc64le-linux-musl
+
 for patch in *.patch; do
     patch -p1 < "$patch"
 done
@@ -25,6 +27,8 @@ done
 # Fix OOM errors.
 cores=$(nproc)
 printf '%s\n' "mk_add_options MOZ_MAKE_FLAGS=\"-j$cores -l$cores\"" >> mozconfig
+
+export LDFLAGS=" -Wl,-rpath=/usr/lib/firefox $LDFLAGS"
 
 ./mach build
 DESTDIR="$1" ./mach install

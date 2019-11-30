@@ -14,7 +14,7 @@ ac_add_options --with-system-bz2
 ac_add_options --with-system-png
 
 # System 'libvpx' is too new.
-ac_add_options --without-system-libvpx
+ac_add_options --with-system-libvpx
 
 ac_add_options --with-system-pixman
 ac_add_options --with-system-ffi
@@ -30,7 +30,6 @@ ac_add_options --disable-callgrind
 ac_add_options --disable-vtune
 
 # Settings for musl.
-#ac_add_options --disable-elf-hack
 ac_add_options --disable-gold
 ac_add_options --disable-jemalloc
 ac_add_options --enable-release
@@ -51,9 +50,11 @@ ac_add_options MOZ_DATA_REPORTING=
 ac_add_options MOZ_DEVICES=
 ac_add_options MOZ_REQUIRE_SIGNING=
 ac_add_options MOZ_TELEMETRY_REPORTING=
+ac_add_options MOZ_NOSPAM=1
 ac_add_options --disable-crashreporter
 ac_add_options --disable-updater
 ac_add_options --disable-dbus
-#ac_add_options --disable-eme
 ac_add_options --disable-necko-wifi
 ac_add_options --disable-webrtc
+ac_add_options --target=powerpc64le-unknown-linux-musl
+ac_add_options --host=powerpc64le-unknown-linux-musl
