@@ -1,0 +1,5 @@
+b4a1f6b6a93931f270691aba4fc85eee032fecda973e6b9c774cd06857609357  rustc-1.39.0-src.tar.gz
+37420069fc877a430c32b8b5a533483fdb7cc1a28d0d9e0c1f0579a111aec888  rustc-1.38.0-powerpc64le-unknown-linux-musl.tar.xz?no-extract
+f4b6f37b1f914a2ca086a7e806d7552275a20982b139670ecb2bc1be2d33df2f  rust-std-1.38.0-powerpc64le-unknown-linux-musl.tar.xz?no-extract
+5725c42c8356443db15f378d88f2ccb67e363ebf4beacc96ae1eac9ba36f8fe7  cargo-0.39.0-powerpc64le-unknown-linux-musl.tar.xz?no-extract
+122b5d9b83778882bdd64d40fea98982f7d1db510e09fc64a4ece5add4fd99a2  musl-libressl.patch

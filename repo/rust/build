@@ -1,0 +1,58 @@
+#!/bin/sh -e
+
+# This package mimics the download process of rust's 'x.py'
+# bootstrap library to allow for the removal of the internet
+# connection requirement per build further enabling checksums
+# and signature verification by KISS.
+{
+    bootstrap_dir=bootstrap
+    mkdir -p "$bootstrap_dir/rust"
+
+    for tarball in *.tar.xz\?no-extract; do
+        mv -f "$tarball" "$bootstrap_dir/${tarball%%\?no-extract}"
+        tar -xf "$bootstrap_dir/${tarball%%\?no-extract}" -C $bootstrap_dir/rust --strip-components 2
+    done
+
+RUST_BIN_DIR="$(pwd)/$bootstrap_dir/rust/bin"
+
+}
+
+patch -p1 < musl-libressl.patch
+
+# 'rust' checksums files in 'vendor/', but we patch a few files.
+for vendor in libc openssl-sys; do
+    sed -i 's/\("files":{\)[^}]*/\1/' "vendor/$vendor/.cargo-checksum.json"
+done
+
+cat > config.toml <<EOF
+[llvm]
+link-shared = true
+[build]
+build = "powerpc64le-unknown-linux-musl"
+host = [ "powerpc64le-unknown-linux-musl" ]
+target = [ "powerpc64le-unknown-linux-musl" ]
+docs = false
+extended = true
+submodules = false
+python = "python3"
+locked-deps = true
+vendor = true
+rustc = "$RUST_BIN_DIR/rustc"
+cargo = "$RUST_BIN_DIR/cargo"
+[install]
+prefix = "/usr"
+[rust]
+channel = "stable"
+rpath = false
+codegen-units = 1
+debuginfo-level = 0
+backtrace = false
+jemalloc = false
+codegen-tests = false
+[target.powerpc64le-unknown-linux-musl]
+llvm-config = "/usr/bin/llvm-config"
+crt-static = false
+EOF
+
+python3 ./x.py build -j "$(nproc)"
+DESTDIR="$1" python3 ./x.py install

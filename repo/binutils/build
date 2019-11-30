@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+./configure \
+    --prefix=/usr \
+    --build=powerpc64le-linux-musl \
+    --host=powerpc64le-linux-musl \
+    --enable-targets=all \
+    --disable-multilib \
+    --disable-werror \
+    --with-mmap \
+    --with-system-zlib
+
+make
+make DESTDIR="$1" install
