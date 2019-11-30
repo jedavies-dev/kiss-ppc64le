@@ -2,7 +2,9 @@
 
 This is a KISS Linux repository containing packages from the main KISS repos which have been patched to build on powerpc64le.
 
-This is currently for testing purposes only.  While most packages will build without any trouble, there are still some which need some work.  Of these, Rust is the most significant.  It does not build because Rust do not provide stage0 tarballs for powerpc64le musl yet.  Because Rust doesn't build, that means no Firefox.  However, it is possible to build these packages on this platform - Void has done this previously.  Once the necessary changes have been made to the KISS build files, these will be added to this repository. 
+This is currently for testing purposes only.
+
+Rust is now building OK.  Firefox will build most of the way, but still fails.  Have added firefox to the repo to see if anyone can suggest a fix.
 
 ## Using the repo
 
@@ -31,7 +33,7 @@ This was built with -mcpu=power9, so you will need a Power9-based system to use 
 
 ### Kernel modules
 
-Be sure to load evdev on boot to load keyboard input support.  Tested with amdgpu/rx580: supported and works fine with xorg.
+Be sure to load evdev on boot to load keyboard input support.  Tested with amdgpu on a rx580: supported and works fine with xorg.
 
 ### GRUB
 
