@@ -2,7 +2,7 @@
 
 This is a KISS Linux repository containing packages from the main KISS repos which have been patched to build on powerpc64le.
 
-Firefox is now building.  Currently going through the rest of core, extra, xorg and testing to check for any other patches needed.
+Firefox is now building.  Currently going through the rest of core, extra, xorg and testing to check for any other patches needed.  Pull requests are welcome.
 
 ## Using the repo
 
