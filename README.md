@@ -2,9 +2,7 @@
 
 This is a KISS Linux repository containing packages from the main KISS repos which have been patched to build on powerpc64le.
 
-This is currently for testing purposes only.
-
-Rust is now building OK.  Firefox will build most of the way, but still fails.  Have added firefox to the repo to see if anyone can suggest a fix.
+Firefox is now building.  Currently going through the rest of core, extra, xorg and testing to check for any other patches needed.
 
 ## Using the repo
 
