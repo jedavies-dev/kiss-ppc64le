@@ -225,3 +225,92 @@ zip | OK
 Package | Status
 ------------ | ------------
 qt5 | OK
+
+## community
+Package | Status
+------------ | ------------
+abduco | OK
+aria2 | OK
+bash | OK
+bdftopcf | OK
+berry | OK
+bim | OK
+bspwm | OK
+btrfs-progs | OK
+cmus | OK
+conky | OK
+cyrus-sasl | OK
+dmenu | OK
+dwm | OK
+emacs | OK
+fd | OK
+feh | OK
+fff | OK
+file | OK
+girara | OK
+gnutls | OK
+go | Fail: Error bootstrapping
+haserl | OK
+htop | OK
+i3-gaps | Fail: Needs yajl
+imlib2 | OK
+joe | OK
+kakoune | OK
+lemonbar | OK
+liberation-fonts-ttf | OK
+libev | OK
+libevent | OK
+libexif | Patched (specify build type)
+libgcrypt | OK
+libgpg-error | OK
+libmad | Patched (specify build type)
+libxkbcommon | OK
+links2 | OK
+lua | OK
+luajit | Fail: Unsupported on ppc
+lynx | OK
+lzo | OK
+mc | OK
+mini_httpd | OK
+mutt | OK
+nano | OK
+ncdu | OK
+ne | OK
+neofetch | OK
+neovim | Fail: Build fails.
+nettle | OK
+nmap | Patched (specify build type)
+openbox | Patched (specify build type)
+os-prober | OK
+pandoc-bin | OK
+pcre | OK
+pfetch | OK
+poppler-glib | OK
+ripgrep | OK
+ruby | OK
+rxvt-unicode | OK
+sdl | Patched (specify build type)
+sdl2 | OK
+setroot | OK
+shellcheck-bin | OK
+slock | OK
+spotifyd | OK
+sxhkd | OK
+sxiv | OK
+terminus-font | OK
+tig | OK
+tmux | OK
+tree | OK
+unifont | OK
+weechat | OK
+xcb-util-xrm | OK
+xclip | OK
+xcompmgr | OK
+xorriso | Patched (specify build type)
+xsel | OK
+yajl | Fails
+zathura | OK
+zathura-pdf-poppler | OK
+zsh | OK
+zstd | OK
+
