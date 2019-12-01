@@ -45,3 +45,40 @@ You don't need GRUB or any other additional bootloader to boot your KISS install
 
 Packages which override ones in core/ extra/ xorg/ and testing/ have symlinks to the corresponding files on your machine in /var/db/kiss/repo/, and are in the top level "repo" directory.
 Packages which override ones in community/ contain a copy of the set of build files, and are in the top level "community" directory.
+
+# Package build status
+## core
+Core: | Status
+------------ | ------------
+baselayout | <span style="color:green"></span>
+binutils | <span style="color:green">Patched (specify build type)</span>
+bison | <span style="color:green"></span>
+busybox | <span style="color:green"></span>
+bzip2 | <span style="color:green"></span>
+curl | <span style="color:green"></span>
+dhcpcd | <span style="color:green"></span>
+e2fsprogs | <span style="color:green"></span>
+eudev | <span style="color:green"></span>
+flex | <span style="color:green"></span>
+gcc | <span style="color:green">Patched (specify ppc build)</span>
+git | <span style="color:green"></span>
+grub | <span style="color:yellow">Not required</span>
+gzip | <span style="color:green"></span>
+kiss | <span style="color:green"></span>
+kiss-utils | <span style="color:green"></span>
+libelf | <span style="color:green">Patched (specify build type)</span>
+libnl | <span style="color:green"></span>
+libressl | <span style="color:green"></span>
+linux-headers | <span style="color:green"></span>
+m4 | <span style="color:green"></span>
+make | <span style="color:green"></span>
+mandoc | <span style="color:green"></span>
+musl | <span style="color:green">Patched (fix location of ldd)</span>
+perl | <span style="color:green"></span>
+pkgconf | <span style="color:green"></span>
+rsync | <span style="color:green">Patched (specify build type)</span>
+util-linux | <span style="color:green"></span>
+wpa_supplicant | <span style="color:green"></span>
+xz | <span style="color:green"></span>
+zlib | <span style="color:green"></span>
+
