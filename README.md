@@ -2,7 +2,7 @@
 
 This is a KISS Linux repository containing packages from the main KISS repos which have been patched to build on powerpc64le.
 
-All packages from core, xorg, extra and testing now build.  Currently working through community packages.
+See tables below for package build status.  Currently testing the community package set.
 
 ## Using the repo
 
