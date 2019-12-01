@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+sed -i'' '/ -fforce-mem/d' configure
+
+./configure \
+    --build=powerpc-musl-linux \
+    --prefix=/usr
+
+make
+make DESTDIR="$1" install
