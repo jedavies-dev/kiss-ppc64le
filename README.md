@@ -48,37 +48,37 @@ Packages which override ones in community/ contain a copy of the set of build fi
 
 # Package build status
 ## core
+
 Core: | Status
 ------------ | ------------
-baselayout | <span style="color:green"></span>
+baselayout | <span style="color:green">OK</span>
 binutils | <span style="color:green">Patched (specify build type)</span>
-bison | <span style="color:green"></span>
-busybox | <span style="color:green"></span>
-bzip2 | <span style="color:green"></span>
-curl | <span style="color:green"></span>
-dhcpcd | <span style="color:green"></span>
-e2fsprogs | <span style="color:green"></span>
-eudev | <span style="color:green"></span>
-flex | <span style="color:green"></span>
-gcc | <span style="color:green">Patched (specify ppc build)</span>
-git | <span style="color:green"></span>
+bison | <span style="color:green">OK</span>
+busybox | <span style="color:green">OK</span>
+bzip2 | <span style="color:green">OK</span>
+curl | <span style="color:green">OK</span>
+dhcpcd | <span style="color:green">OK</span>
+e2fsprogs | <span style="color:green">OK</span>
+eudev | <span style="color:green">OK</span>
+flex | <span style="color:green">OK</span>
+gcc | <span style="color:green">OK. Patched (specify ppc build)</span>
+git | <span style="color:green">OK</span>
 grub | <span style="color:yellow">Not required</span>
-gzip | <span style="color:green"></span>
-kiss | <span style="color:green"></span>
-kiss-utils | <span style="color:green"></span>
-libelf | <span style="color:green">Patched (specify build type)</span>
-libnl | <span style="color:green"></span>
-libressl | <span style="color:green"></span>
-linux-headers | <span style="color:green"></span>
-m4 | <span style="color:green"></span>
-make | <span style="color:green"></span>
-mandoc | <span style="color:green"></span>
-musl | <span style="color:green">Patched (fix location of ldd)</span>
-perl | <span style="color:green"></span>
-pkgconf | <span style="color:green"></span>
-rsync | <span style="color:green">Patched (specify build type)</span>
-util-linux | <span style="color:green"></span>
-wpa_supplicant | <span style="color:green"></span>
-xz | <span style="color:green"></span>
-zlib | <span style="color:green"></span>
-
+gzip | <span style="color:green">OK</span>
+kiss | <span style="color:green">OK</span>
+kiss-utils | <span style="color:green">OK</span>
+libelf | <span style="color:green">OK. Patched (specify build type)</span>
+libnl | <span style="color:green">OK</span>
+libressl | <span style="color:green">OK</span>
+linux-headers | <span style="color:green">OK</span>
+m4 | <span style="color:green">OK</span>
+make | <span style="color:green">OK</span>
+mandoc | <span style="color:green">OK</span>
+musl | <span style="color:green">OK. Patched (fix location of ldd)</span>
+perl | <span style="color:green">OK</span>
+pkgconf | <span style="color:green">OK</span>
+rsync | <span style="color:green">OK. Patched (specify build type)</span>
+util-linux | <span style="color:green">OK</span>
+wpa_supplicant | <span style="color:green">OK</span>
+xz | <span style="color:green">OK</span>
+zlib | <span style="color:green">OK</span>
