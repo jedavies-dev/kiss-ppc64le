@@ -260,10 +260,10 @@ lemonbar | OK
 liberation-fonts-ttf | OK
 libev | OK
 libevent | OK
-libexif | Patched (specify build type)
+libexif | OK. Patched (specify build type)
 libgcrypt | OK
 libgpg-error | OK
-libmad | Patched (specify build type)
+libmad | OK. Patched (specify build type)
 libxkbcommon | OK
 links2 | OK
 lua | OK
@@ -279,8 +279,8 @@ ne | OK
 neofetch | OK
 neovim | Fail: Build fails.
 nettle | OK
-nmap | Patched (specify build type)
-openbox | Patched (specify build type)
+nmap | OK. Patched (specify build type)
+openbox | OK. Patched (specify build type)
 os-prober | OK
 pandoc-bin | OK
 pcre | OK
@@ -289,7 +289,7 @@ poppler-glib | OK
 ripgrep | OK
 ruby | OK
 rxvt-unicode | OK
-sdl | Patched (specify build type)
+sdl | OK. Patched (specify build type)
 sdl2 | OK
 setroot | OK
 shellcheck-bin | OK
@@ -306,7 +306,7 @@ weechat | OK
 xcb-util-xrm | OK
 xclip | OK
 xcompmgr | OK
-xorriso | Patched (specify build type)
+xorriso | OK. Patched (specify build type)
 xsel | OK
 yajl | Fails
 zathura | OK
