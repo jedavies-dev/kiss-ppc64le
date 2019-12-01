@@ -49,7 +49,7 @@ Packages which override ones in community/ contain a copy of the set of build fi
 # Package build status
 ## core
 
-Core: | Status
+Package | Status
 ------------ | ------------
 baselayout | <span style="color:green">OK</span>
 binutils | <span style="color:green">Patched (specify build type)</span>
@@ -82,3 +82,146 @@ util-linux | <span style="color:green">OK</span>
 wpa_supplicant | <span style="color:green">OK</span>
 xz | <span style="color:green">OK</span>
 zlib | <span style="color:green">OK</span>
+
+## xorg
+
+Package | Status
+------------ | ------------
+cairo | OK
+fontconfig | OK
+freetype-harfbuzz | OK
+gdk-pixbuf | OK
+gtk+2 | OK
+gtk+3 | OK
+hicolor-icon-theme | OK
+libICE | OK
+libSM | OK
+libX11 | OK
+libXScrnSaver | OK
+libXau | OK
+libXcomposite | OK
+libXcursor | OK
+libXdamage | OK
+libXext | OK
+libXfixes | OK
+libXfont2 | OK
+libXft | OK
+libXi | OK
+libXinerama | OK
+libXmu | OK
+libXrandr | OK
+libXrender | OK
+libXt | OK
+libXxf86vm | OK
+libdrm | OK
+libepoxy | OK
+libevdev | OK
+libfontenc | OK
+libinput | OK
+libpciaccess | OK
+libxcb | OK
+libxkbfile | OK
+libxshmfence | OK
+mesa | OK. Patched (modify config flags)
+mtdev | OK. Patched (specify build type)
+pango | OK
+pixman | OK
+python-mako | OK
+setxkbmap | OK
+sowm | OK
+st | OK
+xbitmaps | OK
+xcb-proto | OK
+xcb-util | OK
+xcb-util-cursor | OK
+xcb-util-image | OK
+xcb-util-keysyms | OK
+xcb-util-renderutil | OK
+xcb-util-wm | OK
+xf86-input-libinput | OK
+xf86-video-amdgpu | OK
+xf86-video-ati | Not tested
+xf86-video-intel | Not tested
+xf86-video-nouveau | Not tested
+xf86-video-vesa | Not tested
+xinit | OK
+xinput | OK
+xkbcomp | OK
+xkeyboard-config | OK
+xorg-server | OK
+xorg-util-macros | OK
+xorgproto | OK
+xprop | OK
+xrandr | OK
+xrdb | OK
+xset | OK
+xsetroot | OK
+xtrans | OK
+
+## extra
+Package | Status
+------------ | ------------
+alsa-lib | OK
+alsa-utils | OK
+atk | OK
+autoconf | OK
+automake | OK
+cbindgen | OK
+ccache | OK
+clang | OK
+cmake | OK
+cryptsetup | OK
+efibootmgr | Not required
+efivar | Not required
+expat | OK
+ffmpeg | OK
+firefox | OK. Patched (mozconfig and build script)
+fribidi | OK
+giflib | OK
+glib | OK
+gnupg1 | OK
+gperf | OK
+json-c | OK
+lame | OK
+libaio | OK
+libass | OK
+libffi | OK
+libjpeg-turbo | OK
+libogg | OK
+libpng | OK
+libtheora | OK. Patched (specify build type)
+libtool | OK
+libvorbis | OK
+libvpx | OK
+libwebp | OK
+libxml2 | OK
+llvm | OK
+lvm2 | OK
+meson | OK
+mpv | OK
+nasm | OK
+ncurses | OK
+nodejs | OK
+openssh | OK
+opus | OK
+popt | OK. Patched (specify build type)
+python | OK
+python2 | OK
+rust | OK. Patched (use external bootstrap)
+samurai | OK
+shared-mime-info | OK
+sqlite | OK
+sudo | OK
+tiff | OK
+tzdata | OK
+vim | OK
+x264 | OK
+x265 | OK. Patched (added ppc-specific optimizations)
+xvidcore | OK
+yasm | OK. Patched (specify build type)
+zip | OK
+
+## testing
+Package | Status
+------------ | ------------
+qt5 | OK
