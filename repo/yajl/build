@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+# yajl build is broken when some level of parallelism is used for building.
+# See this for a possible patch: https://github.com/lloyd/yajl/pull/187
+# But we can unset MAKEFLAGS so we don't have to maintain a patch,
+# and the package is not too large anyway.
+unset MAKEFLAGS
+
+
+./configure \
+    -p /usr
+
+make
+make DESTDIR="$1" install
