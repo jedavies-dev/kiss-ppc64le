@@ -308,7 +308,7 @@ xclip | OK
 xcompmgr | OK
 xorriso | OK. Patched (specify build type)
 xsel | OK
-yajl | Fails
+yajl | OK
 zathura | OK
 zathura-pdf-poppler | OK
 zsh | OK
