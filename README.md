@@ -252,7 +252,7 @@ gnutls | OK
 go | Fail: Error bootstrapping
 haserl | OK
 htop | OK
-i3-gaps | Fail: Needs yajl
+i3-gaps | OK
 imlib2 | OK
 joe | OK
 kakoune | OK
