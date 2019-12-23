@@ -2,7 +2,7 @@
 
 This is a KISS Linux repository containing packages from the main KISS repos which have been patched to build on powerpc64le.
 
-See tables below for package build status.  Currently testing the community package set.
+See tables below for package build status.
 
 ## Using the repo
 
@@ -51,37 +51,37 @@ Packages which override ones in community/ contain a copy of the set of build fi
 
 Package | Status
 ------------ | ------------
-baselayout | <span style="color:green">OK</span>
-binutils | <span style="color:green">Patched (specify build type)</span>
-bison | <span style="color:green">OK</span>
-busybox | <span style="color:green">OK</span>
-bzip2 | <span style="color:green">OK</span>
-curl | <span style="color:green">OK</span>
-dhcpcd | <span style="color:green">OK</span>
-e2fsprogs | <span style="color:green">OK</span>
-eudev | <span style="color:green">OK</span>
-flex | <span style="color:green">OK</span>
-gcc | <span style="color:green">OK. Patched (specify ppc build)</span>
-git | <span style="color:green">OK</span>
-grub | <span style="color:yellow">Not required</span>
-gzip | <span style="color:green">OK</span>
-kiss | <span style="color:green">OK</span>
-kiss-utils | <span style="color:green">OK</span>
-libelf | <span style="color:green">OK. Patched (specify build type)</span>
-libnl | <span style="color:green">OK</span>
-libressl | <span style="color:green">OK</span>
-linux-headers | <span style="color:green">OK</span>
-m4 | <span style="color:green">OK</span>
-make | <span style="color:green">OK</span>
-mandoc | <span style="color:green">OK</span>
-musl | <span style="color:green">OK. Patched (fix location of ldd)</span>
-perl | <span style="color:green">OK</span>
-pkgconf | <span style="color:green">OK</span>
-rsync | <span style="color:green">OK. Patched (specify build type)</span>
-util-linux | <span style="color:green">OK</span>
-wpa_supplicant | <span style="color:green">OK</span>
-xz | <span style="color:green">OK</span>
-zlib | <span style="color:green">OK</span>
+baselayout | OK
+binutils | Patched (specify build type)
+bison | OK
+busybox | OK
+bzip2 | OK
+curl | OK
+dhcpcd | OK
+e2fsprogs | OK
+eudev | OK
+flex | OK
+gcc | OK. Patched (specify ppc build)
+git | OK
+grub | Not required
+gzip | OK
+kiss | OK
+kiss-utils | OK
+libelf | OK. Patched (specify build type)
+libnl | OK
+libressl | OK
+linux-headers | OK
+m4 | OK
+make | OK
+mandoc | OK
+musl | OK. Patched (fix location of ldd)
+perl | OK
+pkgconf | OK
+rsync | OK. Patched (specify build type)
+util-linux | OK
+wpa_supplicant | OK
+xz | OK
+zlib | OK
 
 ## xorg
 
