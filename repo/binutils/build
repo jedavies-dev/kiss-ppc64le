@@ -4,7 +4,7 @@
     --prefix=/usr \
     --build=powerpc64le-linux-musl \
     --host=powerpc64le-linux-musl \
-    --enable-targets=all \
+    --enable-targets=powerpc64le-linux-musl \
     --disable-multilib \
     --disable-werror \
     --disable-nls \
