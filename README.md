@@ -1,8 +1,6 @@
-# KISS Linux for powerpc64le
+# [KISS Linux](https://getkiss.org/) for powerpc64le
 
-[KISS Linux](https://getkiss.org/) on PowerPC64LE.
-
-This is a KISS Linux repository containing packages from the main KISS repos which have been patched to build on powerpc64le.
+This is a [KISS Linux](https://getkiss.org/) repository containing packages from the main KISS repos which have been patched to build on powerpc64le.
 
 
 ## Installing KISS on powerpc64le
