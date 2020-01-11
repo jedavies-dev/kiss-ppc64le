@@ -1,7 +1,6 @@
 # [KISS Linux](https://getkiss.org/) for powerpc64le
 
-This is a [KISS Linux](https://getkiss.org/) repository containing packages from the main KISS repos which have been patched to build on powerpc64le.
-
+This is a repository containing an unofficial port of [KISS Linux](https://getkiss.org/) to the powerpc64le TalosII platform.
 
 ## Installing KISS on powerpc64le
 
