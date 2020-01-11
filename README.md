@@ -25,7 +25,7 @@ As per the instructions on the KISS webpage, boot your machine into another dist
 For TalosII/Blackbird users, you can load the [Debian netboot](http://ftp.debian.org/debian/dists/buster/main/installer-ppc64el/current/images/netboot/debian-installer/ppc64el/) image directly into petitboot by pressing "n" on the boot menu.
 From here you can install KISS by switching to another terminal and following the [install instructions](https://getkiss.org/pages/install).
 
-There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jdavies-dev/kiss-ppc64le-dist/blob/master/kiss-ppc64le.tar.xz) which you can use to perform the initial install.
+There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1/kiss-chroot.tar.xz) which you can use to perform the initial install.
 
 This was built with -mcpu=power9, so you will need a Power9-based system to use this tarball
 
