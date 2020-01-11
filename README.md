@@ -5,12 +5,12 @@ This is a [KISS Linux](https://getkiss.org/) repository containing packages from
 
 ## Installing KISS on powerpc64le
 
-Please refer to the [KISS](https://getkiss.org/pages/install) webpage for general information about installing KISS.
+Please refer to the main [KISS webpage](https://getkiss.org/pages/install) for general information about installing KISS.
 Once you have installed the tarball to your machine, see the "Using this repo" and "GRUB" sections for ppc-specific instructions.
 
 ## TalosII/Blackbird users
 
-As per the instructions on the KISS webpage, boot your machine into another distro and bootstrap KISS from there.
+You must boot your machine into another distro first and bootstrap KISS from there.
 
 For TalosII/Blackbird users, you can load the [Debian netboot](http://ftp.debian.org/debian/dists/buster/main/installer-ppc64el/current/images/netboot/debian-installer/ppc64el/) image directly into petitboot by pressing "n" on the boot menu when you start your machine. From here you can install KISS by switching to another terminal (e.g. using Alt-F2), then using wget or curl to obtain the [tarball](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1/kiss-chroot.tar.xz) and following the [install instructions](https://getkiss.org/pages/install).
 
