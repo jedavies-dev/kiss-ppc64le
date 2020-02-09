@@ -17,7 +17,7 @@ RUST_BIN_DIR="$(pwd)/$bootstrap_dir/rust/bin"
 
 }
 
-patch -p1 < musl-libressl.patch
+patch -p1 < musl.patch
 
 # 'rust' checksums files in 'vendor/', but we patch a few files.
 for vendor in libc openssl-sys; do
