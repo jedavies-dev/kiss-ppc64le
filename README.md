@@ -32,7 +32,10 @@ Once you have set KISS_PATH can then build packages as normal with "kiss b ...".
 
 ## Kernel modules
 
-[Be sure to load](https://getkiss.org/wiki/loading-a-module-at-boot) ```evdev``` on boot to load keyboard input support.  Tested with amdgpu on a rx580: supported and works fine with xorg.
+[Load the](https://getkiss.org/wiki/loading-a-module-at-boot) ```evdev``` kernel module on boot to have keyboard input support under xorg.  See [this](https://getkiss.org/wiki/replacing-eudev-with-mdev-(or-another-device-manager)) page for alternatives to eudev.
+
+Xorg tested with amdgpu driver on a rx580.
+
 
 ## GRUB
 
