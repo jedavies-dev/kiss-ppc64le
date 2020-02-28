@@ -1,10 +1,10 @@
-# [KISS Linux](https://getkiss.org/) for powerpc64le
+# [KISS Linux](https://k1ss.org/) for powerpc64le
 
-This is a repository containing an unofficial port of [KISS Linux](https://getkiss.org/) to the powerpc64le TalosII platform.
+This is a repository containing an unofficial port of [KISS Linux](https://k1ss.org/) to the powerpc64le TalosII platform.
 
 ## Installing KISS on powerpc64le
 
-Please refer to the main [KISS webpage](https://getkiss.org/pages/install) for general information about installing KISS.
+Please refer to the main [KISS webpage](https://k1ss.org/install) for general information about installing KISS.
 Once you have installed the tarball to your machine, see the "Using this repo" and "GRUB" sections for ppc-specific instructions.
 
 ## TalosII/Blackbird users
@@ -32,7 +32,7 @@ Once you have set KISS_PATH can then build packages as normal with "kiss b ...".
 
 ## Kernel modules
 
-[Load the](https://getkiss.org/wiki/loading-a-module-at-boot) ```evdev``` kernel module on boot to have keyboard input support under xorg.  See [this](https://getkiss.org/wiki/replacing-eudev-with-mdev-(or-another-device-manager)) page for alternatives to eudev.
+[Load the](https://k1ss.org/wiki/Load-a-module-at-boot) ```evdev``` kernel module on boot to have keyboard input support under xorg.  See [this](https://k1ss.org/wiki/Replacing-eudev) page for alternatives to eudev.
 
 Xorg tested with amdgpu driver on a rx580.
 
