@@ -5,6 +5,7 @@
 :> nostrip
 
 export GOARCH=ppc64le
+export GOPPC64=power9
 export GO_LDFLAGS="-w -s"
 export GOROOT_FINAL=/usr/lib/go
 
