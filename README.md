@@ -253,7 +253,7 @@ fff | OK
 file | OK
 girara | OK
 gnutls | OK
-go | Fail: Error bootstrapping
+go | OK
 haserl | OK
 htop | OK
 i3-gaps | OK
