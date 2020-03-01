@@ -1,21 +1,8 @@
 #!/bin/sh -e
 
-# This package mimics the download process of rust's 'x.py'
-# bootstrap library to allow for the removal of the internet
-# connection requirement per build further enabling checksums
-# and signature verification by KISS.
-{
-    bootstrap_dir=bootstrap
-    mkdir -p "$bootstrap_dir/rust"
+ls -la
 
-    for tarball in *.tar.xz\?no-extract; do
-        mv -f "$tarball" "$bootstrap_dir/${tarball%%\?no-extract}"
-        tar -xf "$bootstrap_dir/${tarball%%\?no-extract}" -C $bootstrap_dir/rust --strip-components 2
-    done
-
-RUST_BIN_DIR="$(pwd)/$bootstrap_dir/rust/bin"
-
-}
+RUST_BIN_DIR="$(pwd)/bootstrap/usr/bin"
 
 patch -p1 < musl.patch
 
