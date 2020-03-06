@@ -1,8 +1,0 @@
-#!/bin/sh -e
-
-./configure \
-    --prefix=/usr \
-    --build=powerpc64le-musl-linux
-
-make
-make DESTDIR="$1" install
