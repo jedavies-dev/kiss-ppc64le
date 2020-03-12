@@ -1,7 +1,5 @@
 #!/bin/sh -e
 
-ls -la
-
 RUST_BIN_DIR="$(pwd)/bootstrap/usr/bin"
 
 patch -p1 < musl.patch
