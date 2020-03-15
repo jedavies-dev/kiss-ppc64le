@@ -18,7 +18,7 @@ export LDFLAGS="$LDFLAGS -Wl,-rpath=/usr/lib/firefox"
 export CC=${CC:-gcc}
 export CXX=${CXX:-g++}
 
-export CPLUS_INCLUDE_PATH=/usr/include/c++/9.2.0:/usr/include/c++/9.2.0/powerpc64le-linux-musl
+export CPLUS_INCLUDE_PATH=/usr/include/c++/9.3.0:/usr/include/c++/9.3.0/powerpc64le-linux-musl
 
 for patch in *.patch; do
     patch -p1 < "$patch"
