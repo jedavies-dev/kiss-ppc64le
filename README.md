@@ -53,30 +53,32 @@ Packages which override ones in community/ contain a copy of the set of build fi
 # Package build status
 ## core
 
-Package | Status
------------- | ------------
-baseinit | [checkbox:checked]
-baselayout | [x]
-binutils | [x]
-bison | [x]
-busybox | [x]
-bzip2 | [x]
-curl | [x]
-flex | [x]
-gcc | [x]
-git | [x]
-grub | [ ]
-gzip | [x]
-kiss | [x]
-libressl | [x]
-linux-headers | [x]
-m4 | [x]
-make | [x]
-musl | [x]
-pkgconf | [x]
-rsync | [x]
-xz | [x]
-zlib | [x]
+
+
+Package | Status | Comment
+------------ | ------------ | ------------
+baseinit | :heavy_check_mark:
+baselayout | :heavy_check_mark:
+binutils | :heavy_check_mark:
+bison | :heavy_check_mark:
+busybox | :heavy_check_mark:
+bzip2 | :heavy_check_mark:
+curl | :heavy_check_mark:
+flex | :heavy_check_mark:
+gcc | :heavy_check_mark:
+git | :heavy_check_mark:
+grub | :white_check_mark: | Not used
+gzip | :heavy_check_mark:
+kiss | :heavy_check_mark:
+libressl | :heavy_check_mark:
+linux-headers | :heavy_check_mark:
+m4 | :heavy_check_mark:
+make | :heavy_check_mark:
+musl | :heavy_check_mark:
+pkgconf | :heavy_check_mark:
+rsync | :heavy_check_mark:
+xz | :heavy_check_mark:
+zlib | :heavy_check_mark:
 
 ## xorg
 
