@@ -51,10 +51,8 @@ Packages which override ones in core/ extra/ xorg/ and testing/ have symlinks to
 Packages which override ones in community/ contain a copy of the set of build files, and are in the top level "community" directory.
 
 # Package build status
+
 ## core
-
-
-
 Package | Status | Comment
 ------------ | ------------ | ------------
 baseinit | :heavy_check_mark:
@@ -81,7 +79,6 @@ xz | :heavy_check_mark:
 zlib | :heavy_check_mark:
 
 ## xorg
-
 Package | Status | Comment
 ------------ | ------------ | ------------
 libICE | :heavy_check_mark:
@@ -354,7 +351,7 @@ ncdu | :heavy_check_mark:
 neatvi | :heavy_check_mark:
 neofetch | :heavy_check_mark:
 neovim | :white_check_mark: | Fails to build
-netsurf | :white_check_mark: | Fails to build, missing perl module (HTML::Entities)?
+netsurf | :heavy_check_mark:
 nettle | :heavy_check_mark:
 nmap | :heavy_check_mark:
 nnn | :heavy_check_mark:
