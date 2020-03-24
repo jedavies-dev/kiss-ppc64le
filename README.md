@@ -55,37 +55,28 @@ Packages which override ones in community/ contain a copy of the set of build fi
 
 Package | Status
 ------------ | ------------
-baselayout | OK
-binutils | Patched (specify build type)
-bison | OK
-busybox | OK
-bzip2 | OK
-curl | OK
-dhcpcd | OK
-e2fsprogs | OK
-eudev | OK
-flex | OK
-gcc | OK. Patched (specify ppc build)
-git | OK
-grub | Not required
-gzip | OK
-kiss | OK
-kiss-utils | OK
-libelf | OK. Patched (specify build type)
-libnl | OK
-libressl | OK
-linux-headers | OK
-m4 | OK
-make | OK
-mandoc | OK
-musl | OK. Patched (fix location of ldd)
-perl | OK
-pkgconf | OK
-rsync | OK. Patched (specify build type)
-util-linux | OK
-wpa_supplicant | OK
-xz | OK
-zlib | OK
+baseinit | [checkbox:checked]
+baselayout | [x]
+binutils | [x]
+bison | [x]
+busybox | [x]
+bzip2 | [x]
+curl | [x]
+flex | [x]
+gcc | [x]
+git | [x]
+grub | [ ]
+gzip | [x]
+kiss | [x]
+libressl | [x]
+linux-headers | [x]
+m4 | [x]
+make | [x]
+musl | [x]
+pkgconf | [x]
+rsync | [x]
+xz | [x]
+zlib | [x]
 
 ## xorg
 
