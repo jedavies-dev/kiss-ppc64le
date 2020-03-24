@@ -214,90 +214,252 @@ Package | Status
 qt5 | OK
 
 ## community
-Package | Status
------------- | ------------
-abduco | OK
-aria2 | OK
-bash | OK
-bdftopcf | OK
-berry | OK
-bim | OK
-bspwm | OK
-btrfs-progs | OK
-cmus | OK
-conky | OK
-cyrus-sasl | OK
-dmenu | OK
-dwm | OK
-emacs | OK
-fd | OK
-feh | OK
-fff | OK
-file | OK
-girara | OK
-gnutls | OK
-go | OK
-haserl | OK
-htop | OK
-i3-gaps | OK
-imlib2 | OK
-joe | OK
-kakoune | OK
-lemonbar | OK
-liberation-fonts-ttf | OK
-libev | OK
-libevent | OK
-libexif | OK. Patched (specify build type)
-libgcrypt | OK
-libgpg-error | OK
-libmad | OK. Patched (specify build type)
-libxkbcommon | OK
-links2 | OK
-lua | OK
-luajit | Fail: Unsupported on ppc
-lynx | OK
-lzo | OK
-mc | OK
-mini_httpd | OK
-mutt | OK
-nano | OK
-ncdu | OK
-ne | OK
-neofetch | OK
-neovim | Fail: Build fails.
-nettle | OK
-nmap | OK. Patched (specify build type)
-openbox | OK. Patched (specify build type)
-os-prober | OK
-pandoc-bin | OK
-pcre | OK
-pfetch | OK
-poppler-glib | OK
-ripgrep | OK
-ruby | OK
-rxvt-unicode | OK
-sdl | OK. Patched (specify build type)
-sdl2 | OK
-setroot | OK
-shellcheck-bin | OK
-slock | OK
-spotifyd | OK
-sxhkd | OK
-sxiv | OK
-terminus-font | OK
-tig | OK
-tmux | OK
-tree | OK
-unifont | OK
-weechat | OK
-xcb-util-xrm | OK
-xclip | OK
-xcompmgr | OK
-xorriso | OK. Patched (specify build type)
-xsel | OK
-yajl | OK
-zathura | OK
-zathura-pdf-poppler | OK
-zsh | OK
-zstd | OK
+Package | Status | Comment
+------------ | ------------ | ------------
+2bwm | :heavy_check_mark:
+9base | :heavy_check_mark:
+aerc | :heavy_check_mark:
+aria2 | :heavy_check_mark:
+autoconf | :heavy_check_mark:
+automake | :heavy_check_mark:
+bash | :heavy_check_mark:
+bc | :white_check_mark: | Fails to build
+bdftopcf | :heavy_check_mark:
+berry | :heavy_check_mark:
+bim | :heavy_check_mark:
+bkeymaps | :heavy_check_mark:
+boost | :heavy_check_mark:
+bspwm | :heavy_check_mark:
+btpd | :heavy_check_mark:
+cfm | :heavy_check_mark:
+cmus | :heavy_check_mark:
+conky | :heavy_check_mark:
+coreutils | :heavy_check_mark:
+cryptsetup | :heavy_check_mark:
+custard | :heavy_check_mark:
+cyrus-sasl | :heavy_check_mark:
+cython | :heavy_check_mark:
+dash | :heavy_check_mark:
+diffutils | :heavy_check_mark:
+discount | :heavy_check_mark:
+dmenu | :heavy_check_mark:
+dosbox | :heavy_check_mark:
+dwm | :heavy_check_mark:
+ed | :white_check_mark: | Fails to build, bad tar file
+emacs | :white_check_mark: | Fails to build
+emacs-git | :white_check_mark: | Fails to build
+emacs-nox | :heavy_check_mark:
+ethtool | :heavy_check_mark:
+exa | :heavy_check_mark: | OK, but downloads Rust crates
+expect | :heavy_check_mark: | Patched, added to ppc repo
+extra-cmake-modules | :heavy_check_mark:
+falkon | :white_check_mark: | Fails to build
+fd | :heavy_check_mark:
+fdm | :heavy_check_mark:
+feh | :heavy_check_mark:
+fff | :heavy_check_mark:
+file | :heavy_check_mark:
+findutils | :heavy_check_mark:
+flac | :heavy_check_mark:
+flashrom | :white_check_mark: | Fails to build
+font-awesome | :heavy_check_mark:
+freeglut | :heavy_check_mark:
+gauche | :heavy_check_mark:
+gawk | :heavy_check_mark:
+gdb | :heavy_check_mark:
+girara | :heavy_check_mark:
+glib-networking | :heavy_check_mark:
+glu | :heavy_check_mark:
+gmp | :heavy_check_mark:
+gnu-netcat | :heavy_check_mark: | Patched, added to ppc repo
+gnugrep | :heavy_check_mark:
+gnupg2 | :heavy_check_mark:
+gnutls | :heavy_check_mark:
+go | :heavy_check_mark: | Recently updated
+groff | :heavy_check_mark:
+gtar | :heavy_check_mark:
+hack | :heavy_check_mark:
+harfbuzz-icu | :heavy_check_mark:
+hexyl | :heavy_check_mark: | OK, but downloads Rust crates
+hsetroot | :heavy_check_mark:
+htop | :heavy_check_mark:
+hyperfine | :heavy_check_mark: | OK, but downloads Rust crates
+i3 | :white_check_mark: | Fails to build
+i3-gaps | :white_check_mark: | Fails to build
+icu | :heavy_check_mark:
+imagemagick | :heavy_check_mark:
+imlib2 | :heavy_check_mark:
+intel-media-driver | :white_check_mark: | Fails to build
+iproute2 | :heavy_check_mark:
+iptables | :heavy_check_mark:
+iputils | :heavy_check_mark:
+irssi | :heavy_check_mark:
+isync | :heavy_check_mark:
+jbig2dec | :heavy_check_mark:
+jq | :heavy_check_mark:
+json-c | :heavy_check_mark:
+kakoune | :heavy_check_mark:
+keyutils | :heavy_check_mark:
+kmod | :heavy_check_mark:
+lazygit | :heavy_check_mark:
+lcms2 | :heavy_check_mark:
+ledger | :white_check_mark: | MPFR fails to download
+lemonbar | :heavy_check_mark:
+less | :heavy_check_mark:
+libXslt | :heavy_check_mark:
+libaio | :heavy_check_mark:
+libarchive | :heavy_check_mark:
+libassuan | :heavy_check_mark:
+libcap | :heavy_check_mark:
+libconfig | :heavy_check_mark:
+libev | :heavy_check_mark:
+libevent | :heavy_check_mark:
+libexif | :heavy_check_mark:
+libgcrypt | :heavy_check_mark:
+libgpg-error | :heavy_check_mark:
+libksba | :heavy_check_mark:
+libmad | :heavy_check_mark:
+libmpdclient | :heavy_check_mark:
+libmupdf | :heavy_check_mark:
+libnl | :heavy_check_mark:
+libpsl | :heavy_check_mark:
+libsodium | :heavy_check_mark:
+libsoup | :heavy_check_mark:
+libtool | :heavy_check_mark:
+libtorrent | :heavy_check_mark:
+libxaw3d | :heavy_check_mark:
+links2 | :heavy_check_mark:
+loksh | :heavy_check_mark:
+lua | :heavy_check_mark:
+luajit | :white_check_mark: | Fails to build
+lux | :heavy_check_mark:
+lvm2 | :heavy_check_mark:
+lynx | :heavy_check_mark:
+lzip | :heavy_check_mark:
+lzo | :heavy_check_mark:
+man-pages | :heavy_check_mark:
+man-pages-posix | :heavy_check_mark:
+mawk | :heavy_check_mark:
+mg | :heavy_check_mark:
+minisign | :heavy_check_mark:
+mksh | :heavy_check_mark:
+mpc | :heavy_check_mark:
+mpd | :heavy_check_mark:
+mpfr | :heavy_check_mark:
+msmtp | :heavy_check_mark:
+mutt | :heavy_check_mark:
+nano | :heavy_check_mark:
+nawk-git | :heavy_check_mark:
+ncdu | :heavy_check_mark:
+neatvi | :heavy_check_mark:
+neofetch | :heavy_check_mark:
+neovim | :white_check_mark: | Fails to build
+netsurf | :white_check_mark: | Fails to build, missing perl module (HTML::Entities)?
+nettle | :heavy_check_mark:
+nmap | :heavy_check_mark:
+nnn | :heavy_check_mark:
+npth | :heavy_check_mark:
+nss | :heavy_check_mark:
+ntfs-3g | :heavy_check_mark:
+oath-toolkit | :heavy_check_mark:
+oed | :heavy_check_mark:
+openbox | :heavy_check_mark:
+openjpeg2 | :heavy_check_mark:
+openvpn | :heavy_check_mark:
+opusfile | :heavy_check_mark:
+os-prober | :heavy_check_mark:
+osh | :heavy_check_mark:
+pandoc-bin | :heavy_check_mark:
+parted | :heavy_check_mark:
+pash | :heavy_check_mark:
+patch | :heavy_check_mark:
+pciutils | :heavy_check_mark:
+pcre | :heavy_check_mark:
+perl-html-parser | :heavy_check_mark:
+perl-html-tagset | :heavy_check_mark:
+pfetch | :heavy_check_mark:
+picom | :heavy_check_mark:
+pinentry | :heavy_check_mark:
+pinentry-dmenu | :heavy_check_mark:
+pkcs11-helper | :heavy_check_mark:
+poppler | :heavy_check_mark:
+popt | :heavy_check_mark:
+procps-ng | :heavy_check_mark:
+qemu | :heavy_check_mark:
+qrencode | :heavy_check_mark: | Patched, added to ppc repo
+qt5 | :heavy_check_mark:
+qt5-declarative | :heavy_check_mark:
+qt5-svg | :heavy_check_mark:
+qt5-webchannel | :heavy_check_mark:
+qt5-webengine | :white_check_mark: | Fails to build
+qt5-x11extras | :heavy_check_mark:
+radare2 | :heavy_check_mark:
+rage | :white_check_mark: | OK, Downloads Rust crates
+readline | :heavy_check_mark:
+ripgrep | :heavy_check_mark: | OK, Downloads Rust crates
+rtorrent | :heavy_check_mark:
+ruby | :heavy_check_mark:
+runit | :heavy_check_mark:
+rxvt-unicode | :heavy_check_mark:
+sbase | :heavy_check_mark:
+sc | :heavy_check_mark:
+sc-im | :heavy_check_mark:
+screen | :heavy_check_mark:
+sdl | :heavy_check_mark:
+sdl2 | :heavy_check_mark:
+sed | :heavy_check_mark:
+setroot | :heavy_check_mark:
+sfeed | :heavy_check_mark:
+shadow | :heavy_check_mark:
+shellcheck-bin | :heavy_check_mark:
+sic-git | :heavy_check_mark:
+sinit | :heavy_check_mark:
+slmenu | :heavy_check_mark:
+slock | :heavy_check_mark:
+socat | :heavy_check_mark:
+strace | :heavy_check_mark:
+surfraw | :heavy_check_mark:
+sxhkd | :heavy_check_mark:
+sxiv | :heavy_check_mark:
+syncthing | :heavy_check_mark:
+sysmgr | :heavy_check_mark:
+tabbed | :heavy_check_mark:
+tcc | :white_check_mark: | Fails to build, “Unsupported CPU”
+tcl | :heavy_check_mark:
+tdb | :heavy_check_mark:
+terminus-font | :heavy_check_mark:
+tk | :heavy_check_mark:
+tmux | :heavy_check_mark:
+tokei | :heavy_check_mark: | OK, Downloads Rust crates
+tor | :heavy_check_mark:
+transmission-daemon | :heavy_check_mark:
+tree | :heavy_check_mark:
+tty-clock | :heavy_check_mark:
+ubase | :heavy_check_mark:
+uemacs | :heavy_check_mark:
+unifont | :heavy_check_mark:
+urlview | :heavy_check_mark:
+uthash | :heavy_check_mark:
+vimb | :heavy_check_mark:
+vimpc | :heavy_check_mark:
+webkit2gtk | :heavy_check_mark:
+weechat | :heavy_check_mark:
+wget | :heavy_check_mark:
+wmutils-core | :heavy_check_mark:
+xbacklight | :heavy_check_mark:
+xcb-util-xrm | :heavy_check_mark:
+xclip | :heavy_check_mark:
+xcompmgr | :heavy_check_mark:
+xf86-input-mtrack | :heavy_check_mark:
+xkb-switch | :heavy_check_mark:
+xmlsec1 | :heavy_check_mark:
+xmodmap | :heavy_check_mark:
+xsel | :heavy_check_mark:
+xtrlock | :heavy_check_mark:
+xwallpaper | :heavy_check_mark:
+yajl | :heavy_check_mark:
+youtube-dl | :heavy_check_mark:
+zathura | :heavy_check_mark:
+zathura-pdf-mupdf | :heavy_check_mark:
+zathura-pdf-poppler | :heavy_check_mark:
 
