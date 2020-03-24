@@ -59,101 +59,91 @@ Package | Status | Comment
 ------------ | ------------ | ------------
 baseinit | :heavy_check_mark:
 baselayout | :heavy_check_mark:
-binutils | :heavy_check_mark:
-bison | :heavy_check_mark:
+binutils | :heavy_check_mark: | Patched (enable arch)
+bison | :heavy_check_mark: | Patched build file (parallel build issue)
 busybox | :heavy_check_mark:
 bzip2 | :heavy_check_mark:
 curl | :heavy_check_mark:
 flex | :heavy_check_mark:
-gcc | :heavy_check_mark:
+gcc | :heavy_check_mark: | Patched (enable arch)
 git | :heavy_check_mark:
 grub | :white_check_mark: | Not used
 gzip | :heavy_check_mark:
-kiss | :heavy_check_mark:
+kiss | :heavy_check_mark: | Patched 
 libressl | :heavy_check_mark:
 linux-headers | :heavy_check_mark:
 m4 | :heavy_check_mark:
 make | :heavy_check_mark:
-musl | :heavy_check_mark:
+musl | :heavy_check_mark: | Patched (Update ldd symlink location)
 pkgconf | :heavy_check_mark:
-rsync | :heavy_check_mark:
+rsync | :heavy_check_mark: | Patched (Update build target)
 xz | :heavy_check_mark:
 zlib | :heavy_check_mark:
 
 ## xorg
 
-Package | Status
------------- | ------------
-cairo | OK
-fontconfig | OK
-freetype-harfbuzz | OK
-gdk-pixbuf | OK
-gtk+2 | OK
-gtk+3 | OK
-hicolor-icon-theme | OK
-libICE | OK
-libSM | OK
-libX11 | OK
-libXScrnSaver | OK
-libXau | OK
-libXcomposite | OK
-libXcursor | OK
-libXdamage | OK
-libXext | OK
-libXfixes | OK
-libXfont2 | OK
-libXft | OK
-libXi | OK
-libXinerama | OK
-libXmu | OK
-libXrandr | OK
-libXrender | OK
-libXt | OK
-libXxf86vm | OK
-libdrm | OK
-libepoxy | OK
-libevdev | OK
-libfontenc | OK
-libinput | OK
-libpciaccess | OK
-libxcb | OK
-libxkbfile | OK
-libxshmfence | OK
-mesa | OK. Patched (modify config flags)
-mtdev | OK. Patched (specify build type)
-pango | OK
-pixman | OK
-python-mako | OK
-setxkbmap | OK
-sowm | OK
-st | OK
-xbitmaps | OK
-xcb-proto | OK
-xcb-util | OK
-xcb-util-cursor | OK
-xcb-util-image | OK
-xcb-util-keysyms | OK
-xcb-util-renderutil | OK
-xcb-util-wm | OK
-xf86-input-libinput | OK
-xf86-video-amdgpu | OK
-xf86-video-ati | Not tested
-xf86-video-intel | Not tested
-xf86-video-nouveau | Not tested
-xf86-video-vesa | Not tested
-xinit | OK
-xinput | OK
-xkbcomp | OK
-xkeyboard-config | OK
-xorg-server | OK
-xorg-util-macros | OK
-xorgproto | OK
-xprop | OK
-xrandr | OK
-xrdb | OK
-xset | OK
-xsetroot | OK
-xtrans | OK
+Package | Status | Comment
+------------ | ------------ | ------------
+libICE | :heavy_check_mark:
+libSM | :heavy_check_mark:
+libX11 | :heavy_check_mark:
+libXScrnSaver | :heavy_check_mark:
+libXau | :heavy_check_mark:
+libXcomposite | :heavy_check_mark:
+libXcursor | :heavy_check_mark:
+libXdamage | :heavy_check_mark:
+libXext | :heavy_check_mark:
+libXfixes | :heavy_check_mark:
+libXfont2 | :heavy_check_mark:
+libXft | :heavy_check_mark:
+libXi | :heavy_check_mark:
+libXinerama | :heavy_check_mark:
+libXmu | :heavy_check_mark:
+libXrandr | :heavy_check_mark:
+libXrender | :heavy_check_mark:
+libXt | :heavy_check_mark:
+libXtst | :heavy_check_mark:
+libXxf86vm | :heavy_check_mark:
+libfontenc | :heavy_check_mark:
+libpciaccess | :heavy_check_mark:
+libxcb | :heavy_check_mark:
+libxkbcommon | :heavy_check_mark:
+libxkbfile | :heavy_check_mark:
+libxshmfence | :heavy_check_mark:
+pixman | :heavy_check_mark:
+setxkbmap | :heavy_check_mark:
+sowm | :heavy_check_mark:
+st | :heavy_check_mark:
+xauth | :heavy_check_mark:
+xbitmaps | :heavy_check_mark:
+xcb-proto | :heavy_check_mark:
+xcb-util | :heavy_check_mark:
+xcb-util-cursor | :heavy_check_mark:
+xcb-util-image | :heavy_check_mark:
+xcb-util-keysyms | :heavy_check_mark:
+xcb-util-renderutil | :heavy_check_mark:
+xcb-util-wm | :heavy_check_mark:
+xev | :heavy_check_mark:
+xf86-input-libinput | :heavy_check_mark:
+xf86-video-amdgpu | :heavy_check_mark:
+xf86-video-ati | :heavy_check_mark:
+xf86-video-intel | :white_check_mark:
+xf86-video-nouveau | :heavy_check_mark:
+xf86-video-vesa | :heavy_check_mark:
+xinit | :heavy_check_mark:
+xinput | :heavy_check_mark:
+xkbcomp | :heavy_check_mark:
+xkeyboard-config | :heavy_check_mark:
+xorg-server | :heavy_check_mark:
+xorg-util-macros | :heavy_check_mark:
+xorgproto | :heavy_check_mark:
+xprop | :heavy_check_mark:
+xrandr | :heavy_check_mark:
+xrdb | :heavy_check_mark:
+xset | :heavy_check_mark:
+xsetroot | :heavy_check_mark:
+xtrans | :heavy_check_mark:
+
 
 ## extra
 Package | Status
