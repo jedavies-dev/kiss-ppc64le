@@ -1,3 +1,5 @@
+
+
 # [KISS Linux](https://k1ss.org/) for powerpc64le
 
 This is a repository containing an unofficial port of [KISS Linux](https://k1ss.org/) to the powerpc64le TalosII platform.
@@ -143,72 +145,91 @@ xtrans | :heavy_check_mark:
 
 
 ## extra
-Package | Status
------------- | ------------
-alsa-lib | OK
-alsa-utils | OK
-atk | OK
-autoconf | OK
-automake | OK
-cbindgen | OK
-ccache | OK
-clang | OK
-cmake | OK
-cryptsetup | OK
-efibootmgr | Not required
-efivar | Not required
-expat | OK
-ffmpeg | OK
-firefox | OK. Patched (mozconfig and build script)
-fribidi | OK
-giflib | OK
-glib | OK
-gnupg1 | OK
-gperf | OK
-json-c | OK
-lame | OK
-libaio | OK
-libass | OK
-libffi | OK
-libjpeg-turbo | OK
-libogg | OK
-libpng | OK
-libtheora | OK. Patched (specify build type)
-libtool | OK
-libvorbis | OK
-libvpx | OK
-libwebp | OK
-libxml2 | OK
-llvm | OK
-lvm2 | OK
-meson | OK
-mpv | OK
-nasm | OK
-ncurses | OK
-nodejs | OK
-openssh | OK
-opus | OK
-popt | OK. Patched (specify build type)
-python | OK
-python2 | OK
-rust | OK. Patched (use external bootstrap)
-samurai | OK
-shared-mime-info | OK
-sqlite | OK
-sudo | OK
-tiff | OK
-tzdata | OK
-vim | OK
-x264 | OK
-x265 | OK. Patched (added ppc-specific optimizations)
-xvidcore | OK
-yasm | OK. Patched (specify build type)
-zip | OK
-
-## testing
-Package | Status
------------- | ------------
-qt5 | OK
+Package | Status | Comment
+------------ | ------------ | ------------
+acpid | :heavy_check_mark:
+alsa-lib | :heavy_check_mark:
+alsa-utils | :heavy_check_mark:
+atk | :heavy_check_mark:
+cairo | :heavy_check_mark:
+cbindgen | :heavy_check_mark:
+ccache | :heavy_check_mark:
+clang | :heavy_check_mark:
+cmake | :heavy_check_mark:
+dhcpcd | :heavy_check_mark:
+dosfstools | :heavy_check_mark:
+e2fsprogs | :heavy_check_mark:
+efibootmgr | :heavy_check_mark:
+efivar | :heavy_check_mark:
+eiwd | :heavy_check_mark:
+eudev | :heavy_check_mark:
+expat | :heavy_check_mark:
+ffmpeg | :heavy_check_mark:
+firefox | :heavy_check_mark:
+firefox-bin | :heavy_check_mark:
+firefox-privacy | :heavy_check_mark:
+fontconfig | :heavy_check_mark:
+freetype-harfbuzz | :heavy_check_mark:
+fribidi | :heavy_check_mark:
+gdk-pixbuf | :heavy_check_mark:
+giflib | :heavy_check_mark:
+glib | :heavy_check_mark:
+gnupg1 | :heavy_check_mark:
+gperf | :heavy_check_mark:
+gtk+2 | :heavy_check_mark:
+gtk+3 | :heavy_check_mark:
+hicolor-icon-theme | :heavy_check_mark:
+intel-vaapi-driver | :white_check_mark: | Fails  to build
+lame | :heavy_check_mark:
+libass | :heavy_check_mark:
+libdrm | :heavy_check_mark:
+libelf | :heavy_check_mark:
+libepoxy | :heavy_check_mark:
+liberation-fonts | :heavy_check_mark:
+libevdev | :heavy_check_mark:
+libffi | :heavy_check_mark:
+libinput | :heavy_check_mark:
+libjpeg-turbo | :heavy_check_mark:
+libogg | :heavy_check_mark:
+libpng | :heavy_check_mark:
+libtheora | :heavy_check_mark:
+libva | :heavy_check_mark:
+libva-utils | :heavy_check_mark:
+libvorbis | :heavy_check_mark:
+libvpx | :heavy_check_mark:
+libwebp | :heavy_check_mark:
+libxml2 | :heavy_check_mark:
+llvm | :heavy_check_mark:
+mandoc | :heavy_check_mark:
+mesa | :heavy_check_mark:
+meson | :heavy_check_mark:
+mpv | :heavy_check_mark:
+mtdev | :heavy_check_mark:
+nasm | :heavy_check_mark:
+ncurses | :heavy_check_mark:
+nodejs | :heavy_check_mark:
+opendoas | :heavy_check_mark:
+openresolv | :heavy_check_mark:
+openssh | :heavy_check_mark:
+opus | :heavy_check_mark:
+pango | :heavy_check_mark:
+perl | :heavy_check_mark:
+python | :heavy_check_mark:
+python2 | :heavy_check_mark:
+rust | :heavy_check_mark:
+samurai | :heavy_check_mark:
+sqlite | :heavy_check_mark:
+sudo | :heavy_check_mark:
+tiff | :heavy_check_mark:
+tzdata | :heavy_check_mark:
+util-linux | :heavy_check_mark:
+vim | :heavy_check_mark:
+wpa_supplicant | :heavy_check_mark:
+x264 | :heavy_check_mark:
+x265 | :heavy_check_mark:
+xvidcore | :heavy_check_mark:
+zip | :heavy_check_mark:
+zstd | :heavy_check_mark:
 
 ## community
 Package | Status | Comment
