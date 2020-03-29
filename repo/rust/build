@@ -1,13 +1,15 @@
 #!/bin/sh -e
 
-RUST_BIN_DIR="$(pwd)/bootstrap/usr/bin"
-
 patch -p1 < musl.patch
+
+export LD_LIBRARY_PATH=$(pwd)/usr/lib:/usr/lib
 
 # 'rust' checksums files in 'vendor/', but we patch a few files.
 for vendor in libc openssl-sys; do
     sed -i 's/\("files":{\)[^}]*/\1/' "vendor/$vendor/.cargo-checksum.json"
 done
+
+sed -i 's/(target.contains("linux-gnu") || target.contains("apple-darwin"))/target.contains("linux-gnu") || target.contains("apple-darwin")/g' src/bootstrap/lib.rs
 
 cat > config.toml <<EOF
 [llvm]
@@ -22,8 +24,8 @@ submodules = false
 python = "python3"
 locked-deps = true
 vendor = true
-rustc = "$RUST_BIN_DIR/rustc"
-cargo = "$RUST_BIN_DIR/cargo"
+rustc = "$(pwd)/usr/bin/rustc"
+cargo = "$(pwd)/usr/bin/cargo"
 [install]
 prefix = "/usr"
 [rust]

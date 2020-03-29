@@ -1,3 +1,3 @@
 d2e8f931d16a0539faaaacd801e0d92c58df190269014b2360c6ab2a90ee3475  rustc-1.42.0-src.tar.gz
-12ebdf598d6849de50a450de384dc8081feeaee4879abd213488823c888034eb  rust-powerpc64le-linux-musl-bootstrap-1.41.0.tar.xz
+1cec426f28a9dc2ce7944d014fd1c0bf3566bab74f28410466bc3f6516e26a68  rust-powerpc64le-linux-musl-bootstrap-1.42.0.tar.xz
 abb2acdfc50880da504225dd068f5ea381997cac9ebd23f371290aa8f29d438f  musl.patch

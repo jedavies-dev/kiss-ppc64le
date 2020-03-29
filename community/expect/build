@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+./configure \
+    --prefix=/usr \
+    --build=powerpc64le-musl-linux \
+    --mandir=/usr/share/man
+
+make
+make DESTDIR="$1" install

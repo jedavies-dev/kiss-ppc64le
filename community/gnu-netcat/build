@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+export CFLAGS="$CFLAGS -static"
+
+./configure \
+    --prefix=/usr \
+    --mandir=/usr/share/man \
+    --build=powerpc64le-musl-linux \
+    --infodir=/usr/share/info
+
+make
+make DESTDIR="$1" install
