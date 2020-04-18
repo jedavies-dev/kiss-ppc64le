@@ -6,17 +6,38 @@
     cd autoconf2.13
 
     ./configure \
-        --prefix="$PWD/../autoconf" \
+        --prefix="$PWD/../junk" \
         --program-suffix=-2.13
 
     make
     make install
 )
 
-export PATH=$PWD/autoconf/bin:$PATH
+# Build yasm for Firefox's sole use.
+# Firefox is the only package which needs it
+# and upstream is kinda dead.
+(
+    cd yasm
+
+    ./configure \
+        --build=powerpc64le-musl-linux \
+        --prefix="$PWD/../junk"
+
+    make
+    make install
+)
+
+export YASM=$PWD/junk/bin/yasm
+export PATH=$PWD/junk/bin:$PATH
 export LDFLAGS="$LDFLAGS -Wl,-rpath=/usr/lib/firefox"
 export CC=${CC:-gcc}
 export CXX=${CXX:-g++}
+
+# Keep memory usage as low as possible.
+export LDFLAGS="$LDFLAGS -Wl,--as-needed -Wl,--no-keep-memory -Wl,--stats"
+export MOZ_LINK_FLAGS="$LDFLAGS"
+export MOZ_DEBUG_FLAGS=-g0
+export RUSTFLAGS=-Cdebuginfo=0
 
 export CPLUS_INCLUDE_PATH=/usr/include/c++/9.3.0:/usr/include/c++/9.3.0/powerpc64le-linux-musl
 
