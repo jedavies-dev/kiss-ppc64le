@@ -9,6 +9,8 @@ for vendor in libc openssl-sys; do
     sed -i 's/\("files":{\)[^}]*/\1/' "vendor/$vendor/.cargo-checksum.json"
 done
 
+patch -p1 < llvm10.patch
+
 sed -i 's/(target.contains("linux-gnu") || target.contains("apple-darwin"))/target.contains("linux-gnu") || target.contains("apple-darwin")/g' src/bootstrap/lib.rs
 
 cat > config.toml <<EOF
