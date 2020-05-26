@@ -4,6 +4,8 @@
 
 This is a repository containing an unofficial port of [KISS Linux](https://k1ss.org/) for powerpc64le.
 
+This was built with -mcpu=powerpc64le so should be compatible with at least power8 and power9 cpus, though I've only tested on power9.
+
 ## Installing KISS on powerpc64le
 
 Please refer to the main [KISS webpage](https://k1ss.org/install) for general information about installing KISS.
@@ -17,7 +19,11 @@ For TalosII/Blackbird users, you can load the [Debian netboot](http://ftp.debian
 
 There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1.6/kiss-chroot-powerpc64le.tar.xz) which you can use to perform the initial install.
 
-This was built with -mcpu=powerpc64le so should be compatible with at least power8 and power9 cpus, though I've only tested on power9.
+As on x86_64, it is recommended you rebuild the base packages with CFLAGS/CXXFLAGS appropriate for your system.  On a TalosII, you could use:
+```
+export CFLAGS="-mcpu=power9 -mtune=power9 -O3 -pipe"
+export CXXFLAGS=$CFLAGS
+```
 
 
 ## Using this repo
@@ -32,9 +38,10 @@ You can add other repositories to your KISS_PATH, for example [community](https:
 
 Add a line to /etc/inittab, for example:
 
-```::once:/bin/modprobe evdev```
-
-```::once:/bin/modprobe amdgpu```
+```
+::once:/bin/modprobe evdev
+::once:/bin/modprobe amdgpu
+```
 
 Xorg tested with amdgpu driver on a rx580.
 
