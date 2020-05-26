@@ -10,6 +10,7 @@ for vendor in libc openssl-sys; do
 done
 
 patch -p1 < llvm10.patch
+patch -p1 < libressl-3.1.X.patch
 
 sed -i 's/(target.contains("linux-gnu") || target.contains("apple-darwin"))/target.contains("linux-gnu") || target.contains("apple-darwin")/g' src/bootstrap/lib.rs
 
@@ -28,6 +29,7 @@ locked-deps = true
 vendor = true
 rustc = "$(pwd)/usr/bin/rustc"
 cargo = "$(pwd)/usr/bin/cargo"
+cargo-native-static = true
 [install]
 prefix = "/usr"
 [rust]

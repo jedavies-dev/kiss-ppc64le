@@ -40,7 +40,7 @@ export LDFLAGS="$LDFLAGS -Wl,-rpath=/usr/lib/firefox"
 export MOZ_DEBUG_FLAGS=-g0
 export MOZ_NOSPAM=1
 export RUSTFLAGS=-Cdebuginfo=0
-export CPLUS_INCLUDE_PATH=/usr/include/c++/9.3.0:/usr/include/c++/9.3.0/powerpc64le-linux-musl
+export CPLUS_INCLUDE_PATH=/usr/include/c++/10.1.0:/usr/include/c++/10.1.0/powerpc64le-linux-musl
 
 ../configure \
     --prefix=/usr \
@@ -65,7 +65,6 @@ export CPLUS_INCLUDE_PATH=/usr/include/c++/9.3.0:/usr/include/c++/9.3.0/powerpc6
     --disable-gconf \
     --disable-profiling \
     --disable-accessibility \
-    --disable-tests \
     --disable-system-extension-dirs \
     --disable-parental-controls \
     --disable-debug-symbols \
@@ -78,7 +77,8 @@ export CPLUS_INCLUDE_PATH=/usr/include/c++/9.3.0:/usr/include/c++/9.3.0/powerpc6
     --disable-crashreporter \
     --disable-updater \
     --disable-dbus \
-    --disable-necko-wifi
+    --disable-necko-wifi \
+    --enable-lto=full
 
 make
 make DESTDIR="$1" install
