@@ -33,6 +33,7 @@ You can add other repositories to your KISS_PATH, for example [community](https:
 Add a line to /etc/inittab, for example:
 
 ```::once:/bin/modprobe evdev```
+
 ```::once:/bin/modprobe amdgpu```
 
 Xorg tested with amdgpu driver on a rx580.
