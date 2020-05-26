@@ -4,7 +4,7 @@
 
 This is a repository containing an unofficial port of [KISS Linux](https://k1ss.org/) for powerpc64le.
 
-This was built with -mcpu=powerpc64le so should be compatible with at least power8 and power9 cpus, though I've only tested on power9.
+This was built with -mcpu=powerpc64le so should be compatible with at least power8 and power9 cpus, though this has only been tested on power9.
 
 ## Installing KISS on powerpc64le
 
