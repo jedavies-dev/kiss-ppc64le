@@ -2,7 +2,7 @@
 
 # [KISS Linux](https://k1ss.org/) for powerpc64le
 
-This is a repository containing an unofficial port of [KISS Linux](https://k1ss.org/) to the powerpc64le TalosII platform.
+This is a repository containing an unofficial port of [KISS Linux](https://k1ss.org/) for powerpc64le.
 
 ## Installing KISS on powerpc64le
 
@@ -13,28 +13,27 @@ Once you have installed the tarball to your machine, see the "Using this repo" a
 
 You must boot your machine into another distro first and bootstrap KISS from there.
 
-For TalosII/Blackbird users, you can load the [Debian netboot](http://ftp.debian.org/debian/dists/buster/main/installer-ppc64el/current/images/netboot/debian-installer/ppc64el/) image directly into petitboot by pressing "n" on the boot menu when you start your machine. From here you can install KISS by switching to another terminal (e.g. using Alt-F2), then using wget or curl to obtain the [tarball](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1/kiss-chroot.tar.xz) and following the [install instructions](https://getkiss.org/pages/install).
+For TalosII/Blackbird users, you can load the [Debian netboot](http://ftp.debian.org/debian/dists/buster/main/installer-ppc64el/current/images/netboot/debian-installer/ppc64el/) image directly into petitboot by pressing "n" on the boot menu when you start your machine. From here you can install KISS by switching to another terminal (e.g. using Alt-F2), then using wget or curl to obtain the [tarball](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1.6/kiss-chroot-powerpc64le.tar.xz) and following the [install instructions](https://k1ss.org/install).
 
-There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1/kiss-chroot.tar.xz) which you can use to perform the initial install.
+There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1.6/kiss-chroot-powerpc64le.tar.xz) which you can use to perform the initial install.
 
-This was built with -mcpu=power9, so you will need a Power9-based system to use this tarball
+This was built with -mcpu=powerpc64le so should be compatible with at least power8 and power9 cpus, though I've only tested on power9.
 
 
 ## Using this repo
 
-Once you've extracted the tarball onto your machine, you should chroot into that location and check this GitHub repo out to your machine then add it to your KISS_PATH such that it appears first, e.g.:
+This repo is checked out to ``/var/db/kiss/kiss-ppc64le`` in the tarball.
 
-    git clone https://github.com/jedavies-dev/kiss-ppc64le.git
-    export KISS_PATH=/home/myuser/kiss-ppc64le/repo:/home/myuser/kiss-ppc64le/community:[your other repos]
+Note that the KISS_PATH environment variable specifies the kiss-ppc64le repo before the generic KISS repos.  This means that packages in the kiss-ppc64le repo will override the generic packages where necessary.  The aim of this repo is to keep the number of packages being overridden to a minimum, only overriding the x86_64 packages where it does not build without intervention.
 
-This repo contains packages which also exist in the main KISS repos.  However if this repo is specified first in your KISS_PATH, this means that the powerpc version of the package will be built instead of the x86 version.
-
-Once you have set KISS_PATH can then build packages as normal with "kiss b ...".
-
+You can add other repositories to your KISS_PATH, for example [community](https://github.com/kisslinux/community), [games](https://github.com/sdsddsd1/kiss-games) or [wayland](https://github.com/sdsddsd1/mywayland).
 
 ## Kernel modules
 
-[Load the](https://k1ss.org/wiki/Load-a-module-at-boot) ```evdev``` kernel module on boot to have keyboard input support under xorg.  See [this](https://k1ss.org/wiki/Replacing-eudev) page for alternatives to eudev.
+Add a line to /etc/inittab, for example:
+
+```::once:/bin/modprobe evdev```
+```::once:/bin/modprobe amdgpu```
 
 Xorg tested with amdgpu driver on a rx580.
 
@@ -46,11 +45,6 @@ You don't need GRUB or any other additional bootloader to boot your KISS install
     menuentry 'KISS Linux' {
             linux /boot/vmlinux root=/dev/sda1 ro
     }
-
-## Repo Structure
-
-Packages which override ones in core/ extra/ xorg/ and testing/ have symlinks to the corresponding files on your machine in /var/db/kiss/repo/, and are in the top level "repo" directory.
-Packages which override ones in community/ contain a copy of the set of build files, and are in the top level "community" directory.
 
 # Package build status
 
