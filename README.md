@@ -15,9 +15,9 @@ Once you have installed the tarball to your machine, see the "Using this repo" a
 
 You must boot your machine into another distro first and bootstrap KISS from there.
 
-For TalosII/Blackbird users, you can load the [Debian netboot](http://ftp.debian.org/debian/dists/buster/main/installer-ppc64el/current/images/netboot/debian-installer/ppc64el/) image directly into petitboot by pressing "n" on the boot menu when you start your machine. From here you can install KISS by switching to another terminal (e.g. using Alt-F2), then using wget or curl to obtain the [tarball](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1.6/kiss-chroot-powerpc64le.tar.xz) and following the [install instructions](https://k1ss.org/install).
+For TalosII/Blackbird users, you can load the [Debian netboot](http://ftp.debian.org/debian/dists/buster/main/installer-ppc64el/current/images/netboot/debian-installer/ppc64el/) image directly into petitboot by pressing "n" on the boot menu when you start your machine. From here you can install KISS by switching to another terminal (e.g. using Alt-F2), then using wget or curl to obtain the [tarball](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1.7/kiss-chroot-powerpc64le.tar.xz) and following the [install instructions](https://k1ss.org/install).
 
-There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1.6/kiss-chroot-powerpc64le.tar.xz) which you can use to perform the initial install.
+There is a powerpc64le version of the KISS root tarball available [here](https://github.com/jedavies-dev/kiss-ppc64le/releases/download/0.1.7/kiss-chroot-powerpc64le.tar.xz) which you can use to perform the initial install.
 
 As on x86_64, it is recommended you rebuild the base packages with CFLAGS/CXXFLAGS appropriate for your system.  On a TalosII, you could use:
 ```
