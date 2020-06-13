@@ -34,12 +34,15 @@ export PATH="$PWD/junk/bin:$PATH"
 mkdir -p build
 cd build
 
-export CC="${CC:-gcc}"
-export CXX="${CXX:-g++}"
+# Bypass 'ccache' as it's totally useless when building
+# Firefox and only slows things down.
+export CC="${CC:-/usr/bin/gcc}"
+export CXX="${CXX:-/usr/bin/g++}"
+
 export LDFLAGS="$LDFLAGS -Wl,-rpath=/usr/lib/firefox"
+export RUSTFLAGS="$RUSTFLAGS -Cdebuginfo=0"
 export MOZ_DEBUG_FLAGS=-g0
 export MOZ_NOSPAM=1
-export RUSTFLAGS=-Cdebuginfo=0
 export CPLUS_INCLUDE_PATH=/usr/include/c++/10.1.0:/usr/include/c++/10.1.0/powerpc64le-linux-musl
 
 ../configure \
@@ -59,7 +62,7 @@ export CPLUS_INCLUDE_PATH=/usr/include/c++/10.1.0:/usr/include/c++/10.1.0/powerp
     --with-system-zlib \
     --with-system-bz2 \
     --with-system-png \
-    --with-system-libvpx \
+    --without-system-libvpx \
     --with-system-pixman \
     --with-system-ffi \
     --disable-gconf \
@@ -77,8 +80,7 @@ export CPLUS_INCLUDE_PATH=/usr/include/c++/10.1.0:/usr/include/c++/10.1.0/powerp
     --disable-crashreporter \
     --disable-updater \
     --disable-dbus \
-    --disable-necko-wifi \
-    --enable-lto=full
+    --disable-necko-wifi
 
 make
 make DESTDIR="$1" install
@@ -93,4 +95,3 @@ rm -f  "$1/usr/lib/firefox/browser/features/screenshots@mozilla.org.xpi"
 rm -f  "$1/usr/lib/firefox/browser/features/webcompat-reporter@mozilla.org.xpi"
 rm -f  "$1/usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi"
 rm -f  "$1/usr/lib/firefox/browser/features/doh-rollout@mozilla.org.xpi"
-
