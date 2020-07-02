@@ -60,12 +60,11 @@ export CPLUS_INCLUDE_PATH=/usr/include/c++/10.1.0:/usr/include/c++/10.1.0/powerp
     --without-system-nss \
     --with-system-jpeg \
     --with-system-zlib \
-    --with-system-bz2 \
     --with-system-png \
     --without-system-libvpx \
     --with-system-pixman \
     --with-system-ffi \
-    --disable-gconf \
+    --disable-tests \
     --disable-profiling \
     --disable-accessibility \
     --disable-system-extension-dirs \
@@ -76,7 +75,6 @@ export CPLUS_INCLUDE_PATH=/usr/include/c++/10.1.0:/usr/include/c++/10.1.0/powerp
     --disable-gold \
     --disable-jemalloc \
     --disable-pulseaudio \
-    --disable-startup-notification \
     --disable-crashreporter \
     --disable-updater \
     --disable-dbus \
