@@ -1,7 +1,34 @@
 #!/bin/sh -e
 
+# Enable wayland backend if wayland-protocols is installed.
+kiss l wayland-protocols && wayland=x11,drm,wayland
+
+# Install python-mako which is solely needed for mesa
+# and thus contained in this build.
+{
+    cd mako
+
+    python3 setup.py build
+    python3 setup.py install \
+        --prefix=/usr \
+        --root="$PWD/dist"
+
+    # Use a glob to avoid having to figure out the Python
+    # version for the path below.
+    cd dist/usr/lib/python*/site-packages
+
+    # Set the PYTHONPATH so python knows where to find mako.
+    # The one liner simply appends the existing path and
+    # handles the case where an unset PYTHONPATH breaks
+    # python as it will only contain our new addition.
+    PYTHONPATH=$PWD:$(python -c "import sys; print(':'.join(sys.path))")
+
+    cd -; cd ..
+}
+
+export PYTHONPATH
 export DESTDIR="$1"
-export CFLAGS="-DGLX_X86_READONLY_TEXT $CFLAGS"
+export CFLAGS="$CFLAGS -DGLX_X86_READONLY_TEXT"
 
 # Fix issues with musl and firefox.
 # https://bugs.freedesktop.org/show_bug.cgi?id=35268
@@ -17,7 +44,8 @@ meson \
     -Ddri-drivers=swrast \
     -Dgallium-drivers=radeonsi \
     -Dvulkan-drivers=amd \
-    -Dplatforms=x11,drm \
+    -Dplatforms=${wayland:-x11,drm} \
+    -Dzstd=false \
     . output
 
 ninja -C output

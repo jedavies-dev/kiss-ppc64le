@@ -1,12 +1,29 @@
 #!/bin/sh -e
 
-export DESTDIR="$1"
+patch -p1 < fix-busybox-diff.patch
 
-cmake source \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DENABLE_ALTIVEC=ON \
-    -DCPU_POWER8=ON
+# Remove the perl requirement from configure
+# as we have removed the perl requirement
+# ourselves :-).
+sed -i 's/perl/:/g' configure
 
-cmake --build .
-cmake --install .
+./configure \
+    --prefix=/usr \
+    --enable-vp8 \
+    --enable-vp9 \
+    --enable-experimental \
+    --enable-runtime-cpu-detect \
+    --enable-shared \
+    --enable-postproc \
+    --enable-pic \
+    --disable-tools \
+    --disable-examples \
+    --disable-docs \
+    --disable-unit-tests \
+    --disable-install-docs \
+    --disable-install-srcs \
+    --disable-install-bins \
+    --as=nasm
+
+make
+make DESTDIR="$1" install
