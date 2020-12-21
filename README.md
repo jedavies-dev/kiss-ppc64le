@@ -27,14 +27,17 @@ export CFLAGS="-mcpu=power9 -mtune=power9 -O3 -pipe"
 export CXXFLAGS=$CFLAGS
 ```
 
-
 ## Using this repo
 
-This repo is checked out to ``/var/db/kiss/kiss-ppc64le`` in the tarball.
+Check out this repo once you're inside the KISS ppc64le installation/chroot.
 
-Note that the KISS_PATH environment variable specifies the kiss-ppc64le repo before the generic KISS repos.  This means that packages in the kiss-ppc64le repo will override the generic packages where necessary.  The aim of this repo is to keep the number of packages being overridden to a minimum, only overriding the x86_64 packages where it does not build without intervention.
+This repo includes the main KISS repo and KISS community as submodules and are automatically kept up to date.
 
-You can add other repositories to your KISS_PATH, for example [community](https://github.com/kisslinux/community), [games](https://github.com/sdsddsd1/kiss-games) or [wayland](https://github.com/sdsddsd1/mywayland).
+Set your KISS_PATH to something like this:
+
+```
+export KISS_PATH=/home/user/kiss-ppc64le/core:/home/user/kiss-ppc64le/overrides:/home/user/kiss-ppc64le/modules/repo/extra:/home/user/kiss-ppc64le/modules/repo/xorg:/home/user/kiss-ppc64le/modules/community/community
+```
 
 ## Kernel modules
 
