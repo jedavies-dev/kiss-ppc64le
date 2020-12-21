@@ -59,6 +59,6 @@ You don't need GRUB or any other additional bootloader to boot your KISS install
             linux /boot/vmlinux root=/dev/sda1 ro
     }
 
-## Package build failues
+## Package build failures
 
-PRs and Issues are welcome if you find a package that doesn't build.  Not supporting Rust or Firefox currently.
+PRs and Issues are welcome if you find a package that doesn't build.  I am not supporting Rust or Firefox currently.
