@@ -1,3 +1,5 @@
+# This repo is now archived.
+Please check [Glasnost Linux](https://glasnost.org/) if you want to run KISS Linux on other architectures.
 
 
 # [KISS Linux](https://k1ss.org/) for powerpc64le
